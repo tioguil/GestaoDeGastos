@@ -2,16 +2,16 @@ package model;
 
 public class Usuario {
 	
-	private String usuario, email, senha;
+	private String nome, email, senha;
 	private int id, tipo, status;
 	
 	
 	
-	public String getUsuario() {
-		return usuario;
+	public String getNome() {
+		return nome;
 	}
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public String getEmail() {
 		return email;
@@ -43,11 +43,6 @@ public class Usuario {
 	public void setStatus(int status) {
 		this.status = status;
 	}
-	
-	
-	
-	
-	
-	
+		
 
 }
