@@ -1,19 +1,33 @@
 package ManagedBean;
 
-import javax.faces.bean.ManagedBean;
+import java.util.ArrayList;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
+
+@SessionScoped
 @ManagedBean(name = "test")
 public class Test {
 	
 	
 	
-	private String nome, sobrenome, juntos;
+	private String nome;
+	private ArrayList<String> lista = new ArrayList<>();
 
-	public String juntar() {
-		juntos = nome + " " + sobrenome;
+	public String addNome() {
+		lista.add(nome);
 		return "";
 		
-		
+	}
+	
+	public ArrayList<String> getLista() {
+		return lista;
+	}
+	
+	public void setLista(ArrayList<String> lista) {
+		this.lista = lista;
 	}
 	
 	public String getNome() {
@@ -22,24 +36,6 @@ public class Test {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getSobrenome() {
-		return sobrenome;
-	}
-
-	public void setSobrenome(String sobrenome) {
-		this.sobrenome = sobrenome;
-	}
-
-	public String getJuntos() {
-		return juntos;
-	}
-
-	public void setJuntos(String juntos) {
-		this.juntos = juntos;
-	}
-	
-	
+	}	
 
 }

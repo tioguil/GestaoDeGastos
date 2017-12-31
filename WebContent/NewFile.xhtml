@@ -12,11 +12,16 @@
 
 nome: <h:inputText value="#{test.nome}"/> <br/>
 
-sobrenome: <h:inputText value="#{test.sobrenome}"/> <br/>
+<h:commandButton value="Adicionar nome a lista" action="#{test.addNome}"></h:commandButton>
 
-Seu nome junto fica: <h:outputLabel value="#{test.juntos}"/> <br/>
+<h:dataTable value="#{test.lista}" var="nome">
+	
+	<h:column>
+		<h:outputText value="#{nome}"></h:outputText>
+	
+	</h:column>
 
-<h:commandButton value="Juntar nome" action="#{test.juntar}"></h:commandButton>
+</h:dataTable>
 
 </h:form>
 </html>
