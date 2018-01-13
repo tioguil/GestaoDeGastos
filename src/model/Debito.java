@@ -2,10 +2,24 @@ package model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
 public class Debito {
 	
+	
 	private String nome, descricao;
-	private int id, idUsuario, tipo;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	private int idUsuario, tipo;
+	
+	@Temporal(TemporalType.DATE)
 	private Date data;
 	private double valor;
 	
